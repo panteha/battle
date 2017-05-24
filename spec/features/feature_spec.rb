@@ -5,11 +5,12 @@
 #   end
 # end
 
-feature 'Players can fill in their names' do
-  scenario 'fill in name' do
-   visit('/')
-   fill_in('name', with: 'John')
-   click_button('Submit')
-   expect(page).to have_content('John')
+feature 'Enter names' do
+  scenario 'submitting names' do
+    visit('/')
+    fill_in :player_1_name, with: 'Dave'
+    fill_in :player_2_name, with: 'Mittens'
+    click_button 'Submit'
+    expect(page).to have_content 'Dave vs. Mittens'
   end
 end
