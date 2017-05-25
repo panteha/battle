@@ -16,8 +16,8 @@ end
 
   feature 'attack' do
     scenario 'Attack player 2 and wants to get a confirmation' do
-      sign_in_and_play
-      click_link 'Attack'
-      expect(page).to have_content "Peter attacked Paul"
+       sign_in_and_play
+       click_link 'Attack'
+       expect(page).to have_content "Peter attacked Paul"
     end
   end
